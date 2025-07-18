@@ -2,6 +2,22 @@
 // フリーランスの学校 - プロフリーランス養成講座 新春アーカイブ販売LP
 ---
 
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  .tight-mobile-spacing {
+    line-height: 1.1;
+  }
+  
+  @media (min-width: 768px) {
+    .tight-mobile-spacing {
+      line-height: 1.625;
+    }
+  }
+</style>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -29,7 +45,7 @@
     <header class="bg-banner-gradient py-2 px-4 fixed top-0 left-0 right-0 z-50 shadow-lg">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="/profre-logo.jpg" alt="プロフリーランス養成講座" class="h-8 mr-2 md:h-12 md:mr-3">
+                <img src="/fs-logo.png" alt="フリーランスの学校" class="h-8 mr-2 md:h-12 md:mr-3 rounded-xl" style="filter: drop-shadow(0 0 2px rgba(255,255,255,0.8));">
                 <h1 class="text-white text-sm font-bold md:text-xl">お仕事キホン講座<span class="hidden sm:inline">　全6回動画パック</span></h1>
             </div>
             <button class="bg-white text-banner-pink px-3 py-1 md:px-6 md:py-2 rounded-full text-sm md:text-base font-semibold hover:bg-gray-100 transition-all shadow-lg">
@@ -52,12 +68,14 @@
     </section>
     
     <!-- ヒーローセクション -->
-    <section class="py-20 px-4 bg-banner-gradient">
+    <section class="py-12 md:py-20 px-4 bg-banner-gradient">
         <div class="max-w-4xl mx-auto text-center text-white">
             <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight md:leading-snug">
-                <span class="block md:inline">「応募したのに</span><span class="block md:inline">返事がない…」</span><br>
-                <span class="text-yellow-200">を卒業する</span><br>
-                <span class="block md:inline">フリーランス</span><span class="block md:inline">お仕事キホン講座</span>
+                <span class="block md:inline">「応募したのに</span>
+                <span class="block md:inline mb-1 md:mb-0">返事がない…」</span>
+                <span class="block text-yellow-200 mt-2 mb-4 md:mt-0 md:mb-0">を卒業する</span>
+                <span class="block md:inline">フリーランス</span>
+                <span class="block md:inline">お仕事キホン講座</span>
             </h1>
             
             <p class="text-lg md:text-xl mb-8 opacity-90">
@@ -69,12 +87,11 @@
             <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block border-2 border-white/30">
                 <p class="text-sm text-white/90 mb-2">満足度96%・受講者100名以上の人気講座</p>
                 <div class="mb-4">
-                    <p class="text-lg text-white mb-1">通常受講料 <span class="line-through text-red-200 font-semibold">¥30,000以上</span></p>
+                    <p class="text-lg text-white mb-1">ライブ講座受講 <span class="line-through text-red-200 font-semibold">¥37,900</span></p>
                     <p class="text-2xl font-bold text-yellow-300 bg-red-500/80 px-3 py-1 rounded-full inline-block">特別価格</p>
                 </div>
-                <p class="text-2xl font-bold mb-2 text-white">アーカイブ販売価格</p>
+                <p class="text-2xl font-bold mb-2 text-white">全6回動画パック</p>
                 <p class="text-5xl font-bold text-yellow-300 drop-shadow-lg">¥14,900</p>
-                <p class="text-sm text-white/80 mt-2">プロフリーランス養成講座アーカイブ</p>
             </div>
             
             <div class="text-center">
@@ -122,7 +139,7 @@
                     <h3 class="text-2xl font-bold mb-4">フリーランスの落とし穴</h3>
                     <ul class="text-gray-600 space-y-2">
                         <li>• よくある失敗事例（リアルな体験談）</li>
-                        <li>• 200名以上のフリーランスを見てきたプロの視点</li>
+                        <li>• 200名以上のフリーランスを発注したプロの視点</li>
                         <li>• クライアントが教えてくれない本音</li>
                         <li>• 応募しても返事がこない理由と対策</li>
                     </ul>
@@ -161,12 +178,16 @@
     <section class="py-20 px-4 bg-red-50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">
-                フリーランスの"よくある落とし穴"、あなたは大丈夫？
+                <span class="block md:inline mb-1 md:mb-0">フリーランスの</span>
+                <span class="block md:inline mb-1 md:mb-0">「よくある落とし穴」</span>
+                <span class="block md:inline">あなたは大丈夫？</span>
             </h2>
-            <p class="text-center text-lg text-gray-600 mb-16">
-                自分では気づきにくい「落とし穴」がたくさん潜んでいます。<br>
-                残念ながら、クライアントはわざわざそれを教えてくれません。
-            </p>
+            <div class="text-center text-lg text-gray-600 mb-16">
+                <span class="block md:inline mb-1 md:mb-0">自分では気づきにくい「落とし穴」が</span>
+                <span class="block md:inline mb-1 md:mb-0">たくさん潜んでいます。</span>
+                <span class="block md:inline mb-1 md:mb-0">残念ながら、クライアントは</span>
+                <span class="block md:inline">わざわざそれを教えてくれません。</span>
+            </div>
             
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-red-400">
@@ -182,7 +203,7 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-red-500 mr-3 text-xl">❌</span>
-                            <span><strong>作業効率が悪くて、いつも時間に追われている気がする…</strong></span>
+                            <span><strong>頑張りすぎて空回りしたり、疲れてしまいがち…</strong></span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-red-500 mr-3 text-xl">❌</span>
@@ -190,7 +211,7 @@
                         </li>
                     </ul>
                     <div class="mt-6 p-4 bg-red-100 rounded-lg">
-                        <p class="text-red-800 font-semibold text-center">もし一つでもドキッとしたら、この講座をぜひ活用ください。</p>
+                        <p class="text-red-800 font-semibold text-center">一つでも心当たりがあれば、この講座をぜひ活用ください。</p>
                     </div>
                 </div>
                 
@@ -226,7 +247,8 @@
     <section class="py-20 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">
-                講座の詳細内容（合計10時間分）
+                <span class="block md:inline mb-1 md:mb-0">講座の詳細内容</span>
+                <span class="block md:inline">（合計10時間分）</span>
             </h2>
             <p class="text-center text-lg text-gray-600 mb-16">
                 満足度96%を獲得した人気講座の全収録内容
@@ -234,7 +256,7 @@
             
             <!-- 無料視聴可能 -->
             <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-8 mb-12">
-                <h3 class="text-2xl font-bold mb-6 text-center text-green-800">🎁 第1回は無料で視聴できます！</h3>
+                <h3 class="text-2xl font-bold mb-6 text-center text-green-800">🎁 <span class="block md:inline mb-1 md:mb-0">第1回は無料で</span><span class="block md:inline">視聴できます！</span></h3>
                 <p class="text-lg mb-6 text-center text-green-700">「フリーランスの落とし穴（よくある失敗事例）」を60分無料公開中</p>
                 
                 <!-- 動画埋め込み -->
@@ -250,7 +272,8 @@
                 </div>
                 
                 <div class="text-center text-sm text-green-600">
-                    <p>✓ 全画面表示対応　✓ ながら聞き対応　✓ 倍速再生対応</p>
+                    <p class="block md:hidden">✓ 全画面表示対応　✓ ながら聞き対応<br>✓ 倍速再生対応</p>
+                    <p class="hidden md:block">✓ 全画面表示対応　✓ ながら聞き対応　✓ 倍速再生対応</p>
                 </div>
             </div>
             
@@ -268,7 +291,7 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2">•</span>
-                            <span>200名以上のフリーランスを見てきたプロの視点</span>
+                            <span>200名以上のフリーランスを発注したプロの視点</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-green-500 mr-2">•</span>
@@ -327,7 +350,7 @@
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
                             <span class="text-banner-orange mr-2">•</span>
-                            <span>フリーランス必須ツールマスター講座</span>
+                            <span>フリーランス必須ツールをマスターする</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-banner-orange mr-2">•</span>
@@ -335,7 +358,7 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-banner-orange mr-2">•</span>
-                            <span>「使えない人」と思われないための対策</span>
+                            <span>信頼を損なわないための注意点</span>
                         </li>
                     </ul>
                 </div>
@@ -356,7 +379,7 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-purple-500 mr-2">•</span>
-                            <span>価値提供の具体的な方法</span>
+                            <span>高単価につながる価値提供とは？</span>
                         </li>
                     </ul>
                 </div>
@@ -369,7 +392,7 @@
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
                             <span class="text-indigo-500 mr-2">•</span>
-                            <span>継続的に案件を獲得する人の習慣</span>
+                            <span>継続して案件を受けている人の習慣とは？</span>
                         </li>
                         <li class="flex items-start">
                             <span class="text-indigo-500 mr-2">•</span>
@@ -377,10 +400,19 @@
                         </li>
                         <li class="flex items-start">
                             <span class="text-indigo-500 mr-2">•</span>
-                            <span>課題のおさらいと実践ワーク</span>
+                            <span>ライフスタイルに合った働き方</span>
                         </li>
                     </ul>
                 </div>
+            </div>
+            
+            <!-- 注意書き -->
+            <div class="text-center mt-12">
+                <p class="text-sm text-gray-500">
+                    <span class="block md:inline">※本アーカイブには、リアルタイム講座で行われている受講証・認定証の発行、課題提出、受講者コミュニティは</span>
+                    <span class="block md:inline">含まれません。</span><br>
+                    アーカイブ動画視聴のみとなります。
+                </p>
             </div>
         </div>
     </section>
@@ -423,118 +455,105 @@
             </h3>
             
             <div class="text-center mb-12">
-                <p class="text-lg text-gray-600">
-                    実際の受講生から数百件以上の喜びの声をいただいています
-                </p>
+                <div class="text-lg text-gray-600">
+                    <span class="block md:inline mb-1 md:mb-0">高い評価と学びの多さを実感する声を</span>
+                    <span class="block md:inline">多数いただいています</span>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Tweet 1 -->
-                <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">C</div>
-                        <div>
-                            <div class="font-bold text-sm">@cityboygirl_nft</div>
-                            <div class="text-gray-500 text-xs">1月28日</div>
-                        </div>
-                        <div class="ml-auto">
-                            <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </div>
+            <!-- Twitter公式埋め込みコード（正しい順番） -->
+            <div class="max-w-6xl mx-auto" lang="ja">
+                <!-- PC表示：グリッドレイアウト -->
+                <div class="hidden md:grid md:grid-cols-2 gap-6">
+                    <!-- 上左: cityboygirl_nft -->
+                    <div>
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">＼ <a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%83%95%E3%83%AA?src=hash&amp;ref_src=twsrc%5Etfw">#プロフリ</a> 認定講座の第3回講座／<br>昨夜、第3回講座「実は嫌われるダメな気遣い5選」にリアタイ参加してきました！<br><br>ゆりえもんさんの講座、<br>本当に分かりやすくて聞きやすい🥺✨<br><br>💡学んだポイント💡<br><br>✔️真面目すぎる文章<br> →もう少しカジュアルに<br><br>✔️長文で丁寧に説明しすぎる… <a href="https://t.co/nm5VHiIsr0">pic.twitter.com/nm5VHiIsr0</a></p>
+                            &mdash; milk🧸 (@cityboygirl_nft) <a href="https://twitter.com/cityboygirl_nft/status/1887825861472317625?ref_src=twsrc%5Etfw">February 7, 2025</a>
+                        </blockquote>
                     </div>
-                    <p class="text-gray-800 text-sm mb-3">フリーランスの学校の講座、とても勉強になりました！提案文の書き方が全然違うことがわかって驚きです。継続案件につながりそうです✨</p>
-                    <a href="https://x.com/cityboygirl_nft/status/1887825861472317625" target="_blank" class="text-blue-500 text-xs hover:underline">元のツイートを見る →</a>
+                    
+                    <!-- 上右: hidestep7 -->
+                    <div>
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                            &mdash; hidestep7 (@hidestep7) <a href="https://twitter.com/hidestep7/status/1882433032034095296?ref_src=twsrc%5Etfw">January 23, 2025</a>
+                        </blockquote>
+                    </div>
+                    
+                    <!-- 中左: Te2u_X -->
+                    <div>
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                            &mdash; Te2u_X (@Te2u_X) <a href="https://twitter.com/Te2u_X/status/1882714090969379178?ref_src=twsrc%5Etfw">January 24, 2025</a>
+                        </blockquote>
+                    </div>
+                    
+                    <!-- 中右: 2020chinawata、ひとのな（2つ縦並び） -->
+                    <div class="space-y-4">
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                            &mdash; 2020chinawata (@2020chinawata) <a href="https://twitter.com/2020chinawata/status/1899831977328734677?ref_src=twsrc%5Etfw">February 11, 2025</a>
+                        </blockquote>
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">クライアントさんの<br>お役にたちたい思考は<br>もちろんあるんだけど<br>「自分ごと」として取り組めてかって<br>言われるとできてなかったかも😭<br>自分ごとだと数字追ったり<br>リサーチもきっとするよね！<br><br>今回も新たな気づき<br>ありがとうございました！！😭✨<a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%83%95%E3%83%AA?src=hash&amp;ref_src=twsrc%5Etfw">#プロフリ</a><a href="https://twitter.com/hashtag/%E3%83%95%E3%83%AA%E6%A0%A1?src=hash&amp;ref_src=twsrc%5Etfw">#フリ校</a> <a href="https://t.co/ztyEihnscW">pic.twitter.com/ztyEihnscW</a></p>
+                            &mdash; ひとのな｜AIで時短する動画編集者 (@hitonona_ve_ai) <a href="https://twitter.com/hitonona_ve_ai/status/1899134252341661944?ref_src=twsrc%5Etfw">March 10, 2025</a>
+                        </blockquote>
+                    </div>
+                    
+                    <!-- 下左: kawa_ts421 -->
+                    <div>
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                            &mdash; kawa_ts421 (@kawa_ts421) <a href="https://twitter.com/kawa_ts421/status/1899225462678937793?ref_src=twsrc%5Etfw">February 9, 2025</a>
+                        </blockquote>
+                    </div>
+                    
+                    <!-- 下右: massan_assist -->
+                    <div>
+                        <blockquote class="twitter-tweet" data-lang="ja">
+                            <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                            &mdash; massan_assist (@massan_assist) <a href="https://twitter.com/massan_assist/status/1899356079991197835?ref_src=twsrc%5Etfw">February 10, 2025</a>
+                        </blockquote>
+                    </div>
                 </div>
+                
+                <!-- スマホ表示：1列縦並び -->
+                <div class="md:hidden space-y-6">
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">＼ <a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%83%95%E3%83%AA?src=hash&amp;ref_src=twsrc%5Etfw">#プロフリ</a> 認定講座の第3回講座／<br>昨夜、第3回講座「実は嫌われるダメな気遣い5選」にリアタイ参加してきました！<br><br>ゆりえもんさんの講座、<br>本当に分かりやすくて聞きやすい🥺✨<br><br>💡学んだポイント💡<br><br>✔️真面目すぎる文章<br> →もう少しカジュアルに<br><br>✔️長文で丁寧に説明しすぎる… <a href="https://t.co/nm5VHiIsr0">pic.twitter.com/nm5VHiIsr0</a></p>
+                        &mdash; milk🧸 (@cityboygirl_nft) <a href="https://twitter.com/cityboygirl_nft/status/1887825861472317625?ref_src=twsrc%5Etfw">February 7, 2025</a>
+                    </blockquote>
 
-                <!-- Tweet 2 -->
-                <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">H</div>
-                        <div>
-                            <div class="font-bold text-sm">@hidestep7</div>
-                            <div class="text-gray-500 text-xs">1月23日</div>
-                        </div>
-                        <div class="ml-auto">
-                            <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-800 text-sm mb-3">講座を受けて、クライアントとのコミュニケーションが劇的に改善しました。継続案件につながるコツが学べて良かった！実践的な内容でした。</p>
-                    <a href="https://x.com/hidestep7/status/1882433032034095296" target="_blank" class="text-blue-500 text-xs hover:underline">元のツイートを見る →</a>
-                </div>
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                        &mdash; hidestep7 (@hidestep7) <a href="https://twitter.com/hidestep7/status/1882433032034095296?ref_src=twsrc%5Etfw">January 23, 2025</a>
+                    </blockquote>
 
-                <!-- Tweet 3 -->
-                <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-teal-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">T</div>
-                        <div>
-                            <div class="font-bold text-sm">@Te2u_X</div>
-                            <div class="text-gray-500 text-xs">1月24日</div>
-                        </div>
-                        <div class="ml-auto">
-                            <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-800 text-sm mb-3">フリーランスの基本がしっかり学べて、自信を持って案件に応募できるようになりました。ありがとうございました！これで安心してお仕事できます。</p>
-                    <a href="https://x.com/Te2u_X/status/1882714090969379178" target="_blank" class="text-blue-500 text-xs hover:underline">元のツイートを見る →</a>
-                </div>
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                        &mdash; Te2u_X (@Te2u_X) <a href="https://twitter.com/Te2u_X/status/1882714090969379178?ref_src=twsrc%5Etfw">January 24, 2025</a>
+                    </blockquote>
 
-                <!-- Tweet 4 -->
-                <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">C</div>
-                        <div>
-                            <div class="font-bold text-sm">@2020chinawata</div>
-                            <div class="text-gray-500 text-xs">2月11日</div>
-                        </div>
-                        <div class="ml-auto">
-                            <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-800 text-sm mb-3">請求書の作り方から学べて、実務で本当に役立っています。プロとしての基礎固めができました。知らなかったことがたくさんありました。</p>
-                    <a href="https://x.com/2020chinawata/status/1899831977328734677" target="_blank" class="text-blue-500 text-xs hover:underline">元のツイートを見る →</a>
-                </div>
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                        &mdash; 2020chinawata (@2020chinawata) <a href="https://twitter.com/2020chinawata/status/1899831977328734677?ref_src=twsrc%5Etfw">February 11, 2025</a>
+                    </blockquote>
 
-                <!-- Tweet 5 -->
-                <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">K</div>
-                        <div>
-                            <div class="font-bold text-sm">@kawa_ts421</div>
-                            <div class="text-gray-500 text-xs">2月9日</div>
-                        </div>
-                        <div class="ml-auto">
-                            <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-800 text-sm mb-3">長く続けるための習慣術が学べて、モチベーション維持ができています。フリーランスの心構えが変わりました。継続的に成長していけそうです。</p>
-                    <a href="https://x.com/kawa_ts421/status/1899225462678937793" target="_blank" class="text-blue-500 text-xs hover:underline">元のツイートを見る →</a>
-                </div>
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">クライアントさんの<br>お役にたちたい思考は<br>もちろんあるんだけど<br>「自分ごと」として取り組めてかって<br>言われるとできてなかったかも😭<br>自分ごとだと数字追ったり<br>リサーチもきっとするよね！<br><br>今回も新たな気づき<br>ありがとうございました！！😭✨<a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%83%95%E3%83%AA?src=hash&amp;ref_src=twsrc%5Etfw">#プロフリ</a><a href="https://twitter.com/hashtag/%E3%83%95%E3%83%AA%E6%A0%A1?src=hash&amp;ref_src=twsrc%5Etfw">#フリ校</a> <a href="https://t.co/ztyEihnscW">pic.twitter.com/ztyEihnscW</a></p>
+                        &mdash; ひとのな｜AIで時短する動画編集者 (@hitonona_ve_ai) <a href="https://twitter.com/hitonona_ve_ai/status/1899134252341661944?ref_src=twsrc%5Etfw">March 10, 2025</a>
+                    </blockquote>
 
-                <!-- Tweet 6 -->
-                <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">M</div>
-                        <div>
-                            <div class="font-bold text-sm">@massan_assist</div>
-                            <div class="text-gray-500 text-xs">2月10日</div>
-                        </div>
-                        <div class="ml-auto">
-                            <svg class="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-800 text-sm mb-3">単価アップのコツが具体的で実践的。講座で学んだことを活かして、しっかり収入を上げることができました。投資した分はすぐに回収できました！</p>
-                    <a href="https://x.com/massan_assist/status/1899356079991197835" target="_blank" class="text-blue-500 text-xs hover:underline">元のツイートを見る →</a>
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                        &mdash; kawa_ts421 (@kawa_ts421) <a href="https://twitter.com/kawa_ts421/status/1899225462678937793?ref_src=twsrc%5Etfw">February 9, 2025</a>
+                    </blockquote>
+
+                    <blockquote class="twitter-tweet" data-lang="ja">
+                        <p lang="ja" dir="ltr">実際のツイート内容をここに入れる</p>
+                        &mdash; massan_assist (@massan_assist) <a href="https://twitter.com/massan_assist/status/1899356079991197835?ref_src=twsrc%5Etfw">February 10, 2025</a>
+                    </blockquote>
                 </div>
             </div>
             
@@ -546,10 +565,11 @@
                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.80l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
-                    Xで「#プロフリ」と検索して他の口コミを見る
+                    <span class="hidden md:inline">「#プロフリ」と検索して他の口コミを見る</span>
+                    <span class="md:hidden">「#プロフリ」と検索して<br>他の口コミを見る</span>
                 </a>
                 <p class="text-sm text-gray-500 mt-2">
-                    ※数百件以上の受講生の声が確認できます
+                    ※数百件以上の受講生の投稿が確認できます
                 </p>
             </div>
         </div>
@@ -571,22 +591,23 @@
     <section class="py-20 px-4 bg-banner-gradient">
         <div class="max-w-4xl mx-auto text-center text-white">
             <h2 class="text-4xl font-bold mb-8">
-                今すぐ始めよう
+                <span class="block md:inline mb-1 md:mb-0">長く活躍できる</span>
+                <span class="block md:inline">フリーランスになろう</span>
             </h2>
-            <p class="text-xl mb-12 opacity-90">
-                収録時間10時間の充実した内容<br>
+            <p class="text-lg md:text-xl mb-12 opacity-90">
+                2025年1月〜3月開催の人気講座アーカイブ<br>
+                <span class="text-yellow-200 font-bold">収録時間10時間</span>の充実した内容<br>
                 必須ツール、実務、継続的な収入アップまで
             </p>
             
             <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block border-2 border-white/30">
                 <p class="text-sm text-white/90 mb-2">満足度96%・受講者100名以上の人気講座</p>
                 <div class="mb-4">
-                    <p class="text-lg text-white mb-1">通常受講料 <span class="line-through text-red-200 font-semibold">¥30,000以上</span></p>
+                    <p class="text-lg text-white mb-1">ライブ講座受講 <span class="line-through text-red-200 font-semibold">¥37,900</span></p>
                     <p class="text-2xl font-bold text-yellow-300 bg-red-500/80 px-3 py-1 rounded-full inline-block">特別価格</p>
                 </div>
-                <p class="text-2xl font-bold mb-2 text-white">アーカイブ販売価格</p>
+                <p class="text-2xl font-bold mb-2 text-white">全6回動画パック</p>
                 <p class="text-5xl font-bold text-yellow-300 drop-shadow-lg">¥14,900</p>
-                <p class="text-sm text-white/80 mt-2">プロフリーランス養成講座アーカイブ</p>
             </div>
             
             <div class="text-center">
@@ -610,13 +631,14 @@
                     <a href="https://freelance-gakkou.com/tokuteishotorihikiho/" target="_blank" class="text-gray-600 hover:text-gray-800 text-sm underline">
                         特定商取引法に基づく表記
                     </a>
-                    <a href="/privacy-policy" target="_blank" class="text-gray-600 hover:text-gray-800 text-sm underline">
+                    <a href="https://freelance-gakkou.com/privacy-policy/" target="_blank" class="text-gray-600 hover:text-gray-800 text-sm underline">
                         プライバシーポリシー
                     </a>
                 </div>
-                <p class="text-gray-600 text-sm">
-                    © Copyright 2025 フリーランスの学校 All rights reserved.
-                </p>
+                <div class="text-gray-600 text-sm">
+                    <span class="block md:inline mb-1 md:mb-0">© Copyright 2025 フリーランスの学校</span>
+                    <span class="block md:inline">All rights reserved.</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -624,8 +646,30 @@
     <!-- Vimeo Player Script -->
     <script src="https://player.vimeo.com/api/player.js"></script>
     
-    <!-- Twitter Widgets Script -->
+    <!-- Twitter Widgets Script - 日本語対応版 -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        console.log("Twitter script starting...");
+        
+        window.addEventListener('load', function() {
+            console.log("Window loaded, checking for twttr...");
+            
+            function checkTwitter() {
+                if (typeof window.twttr !== 'undefined' && window.twttr.widgets) {
+                    console.log("twttr.widgets found, loading...");
+                    // 日本語設定でTwitter widgetsを読み込み
+                    window.twttr.widgets.load(document, {
+                        lang: 'ja'
+                    });
+                } else {
+                    console.log("twttr not ready, retrying in 100ms...");
+                    setTimeout(checkTwitter, 100);
+                }
+            }
+            
+            checkTwitter();
+        });
+    </script>
     
     
 </body>
