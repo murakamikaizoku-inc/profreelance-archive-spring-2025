@@ -10,8 +10,8 @@ export default {
         'banner-peach': '#ffccbc',
       },
       backgroundImage: {
-        'banner-gradient': 'linear-gradient(135deg, #ffb74d 0%, #ff8a80 50%, #ff6b9d 100%)',
-        'banner-gradient-soft': 'linear-gradient(135deg, #fff8f5 0%, #ffeee8 50%, #fce4ec 100%)',
+        'banner-gradient': 'linear-gradient(135deg, #ffb3d1 0%, #ff8a95 50%, #ffb74d 100%)',
+        'banner-gradient-soft': 'linear-gradient(135deg, #fdf7fa 0%, #fff3e0 50%, #ffe0cc 100%)',
       }
     },
   },
